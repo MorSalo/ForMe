@@ -47,7 +47,7 @@ class TreeConst {
         //   if(v>3) flag=false;
         // });
         // if(!flag) return "false";
-        Integer[] arraval =hs.values().toArray(new Integer[]{});;
+        Integer[] arraval =hs.values().toArray(new Integer[]{});
 
         for(Integer i :arraval){
             if(i>3){
@@ -58,10 +58,11 @@ class TreeConst {
         return "true";
     }
 
-//    public static void main (String[] args) {
-//        // keep this function call here
-//        Scanner s = new Scanner(System.in);
-//        System.out.print(TreeConstructor(s.nextLine()));
-//    }
+    //not responsive
+    public static void TreeConstructorHelper() {
+        Scanner s = new Scanner(System.in);
+//        String str = "new String[] "+s.nextLine();
+        System.out.print(TreeConstructor(new String[] {"(1,2)", "(2,4)", "(5,7)", "(7,2)", "(9,5)"}));
+    }
 
 }

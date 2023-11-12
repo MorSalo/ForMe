@@ -63,4 +63,14 @@ public class MedianSortedArrays {
                 return ret;
             }
         }
+
+        //not responsive
+        public static void findMedianSortedArraysHelper(){
+            int[] nums1 = new int[]{1,3,4};
+            int[] nums2 = new int[]{2};
+            if(findMedianSortedArrays(nums1,nums2)==2.5){
+                System.out.println("great "+ findMedianSortedArrays(nums1,nums2));
+            }
+            else System.out.println("Oh no! you got: "+ findMedianSortedArrays(nums1,nums2));
+        }
 }

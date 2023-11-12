@@ -6,32 +6,18 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import static test.QuestionMarks.QuestionsMarks;
+import static test.QuestionMarks.QuestionsMarksHelper;
 import static test.Reverse.ReverseHelper;
 import static test.Polindrom.polindromHelper;
 import static test.Factorial.factorialHelper;
 import static test.LongestWords.longestWordsHelper;
 import static test.TreeConst.TreeConstructor;
 import static test.MedianSortedArrays.findMedianSortedArrays;
+import static test.TreeConst.TreeConstructorHelper;
+
 public class Main {
     public static void main(String[] args)  {
-        //mainHelper();
-        // keep this function call here
-//        Scanner s = new Scanner(System.in);
-//        System.out.println(TreeConstructor(new String[] {"(1,2)", "(2,4)", "(5,7)", "(7,2)", "(9,5)"}));
-
-//        Scanner s = new Scanner(System.in);
-//        String in =s.nextLine();
-//        String str = QuestionsMarks(in);
-//        System.out.println(str);
-
-        int[] nums1 = new int[]{1,3,4};
-        int[] nums2 = new int[]{2};
-        if(findMedianSortedArrays(nums1,nums2)==2.5){
-            System.out.println("greap "+ findMedianSortedArrays(nums1,nums2));
-        }
-        else System.out.println("fuck you got "+ findMedianSortedArrays(nums1,nums2));
-
-
+        mainHelper();
         System.out.println("see yaaaa");
     }
 
@@ -44,6 +30,9 @@ public class Main {
                     "enter '2' for Reverse game \n" +
                     "enter '3' for Factorial game \n" +
                     "enter '4' for Longest Word game \n" +
+                    "enter '5' for Median Sorted Arrays game \n"+
+                    "enter '6' for Question Marks game \n" +
+                    "enter '7' for Tree Constructor game \n"+
                     "enter 'stop' to end the game");
             String sin = s.nextLine();
 
@@ -59,6 +48,15 @@ public class Main {
                     break;
                 case "4":
                     longestWordsHelper();
+                    break;
+                case "5":
+                    MedianSortedArrays.findMedianSortedArraysHelper();
+                    break;
+                case "6":
+                    QuestionsMarksHelper();
+                    break;
+                case "7":
+                    TreeConstructorHelper();
                     break;
                 case "stop":
                     return;

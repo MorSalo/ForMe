@@ -33,4 +33,11 @@ public class QuestionMarks {
         }
         return "false";
     }
+
+    public static void QuestionsMarksHelper() {
+        Scanner s = new Scanner(System.in);
+        String in =s.nextLine();
+        String str = QuestionsMarks(in);
+        System.out.println(str);
+    }
 }
