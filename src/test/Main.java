@@ -33,6 +33,8 @@ public class Main {
                     "enter '5' for Median Sorted Arrays game \n"+
                     "enter '6' for Question Marks game \n" +
                     "enter '7' for Tree Constructor game \n"+
+                    "enter '8' for DFS \n"+
+                    "enter '9' for BFS \n"+
                     "enter 'stop' to end the game");
             String sin = s.nextLine();
 
@@ -57,6 +59,12 @@ public class Main {
                     break;
                 case "7":
                     TreeConstructorHelper();
+                    break;
+                case "8":
+                    DFS.DFSHelper();
+                    break;
+                case "9":
+                    BFS.BFSHelper();
                     break;
                 case "stop":
                     return;

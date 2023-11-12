@@ -1,28 +1,28 @@
 package test;
 
 import java.util.Arrays;
-import java.util.Deque;
-import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class DFS<T> implements Search<T>{
-    @Override
-    public void traverse(Vertex<T> start){
-        Deque<Vertex<T>> stack = new LinkedList<>();
-        stack.push(start);
+public class BFS<T> implements Search<T>{
 
-        while (!stack.isEmpty()){
-            Vertex<T> now = stack.pop();
+    @Override
+    public void traverse(Vertex<T> start) {
+        Queue<Vertex<T>> queue = new ArrayBlockingQueue<>(100);
+        queue.add(start);
+
+        while (!queue.isEmpty()){
+            Vertex<T> now = queue.poll();
+
             if(!now.visited){
-                now.visited =true;
+                now.visited=true;
                 System.out.println(now.val);
-                now.adj.forEach(stack::push);
+                now.adj.forEach(queue::offer);
             }
         }
     }
 
-    public static void DFSHelper(){
+    public static void BFSHelper(){
         Vertex<Integer> v0 = new Vertex<>(0);
         Vertex<Integer> v1 = new Vertex<>(1);
         Vertex<Integer> v2 = new Vertex<>(2);
@@ -36,7 +36,7 @@ public class DFS<T> implements Search<T>{
         v4.setAdj(Arrays.asList(v2,v6));
         v6.setAdj(Arrays.asList(v0));
 
-        Search<Integer> search = new DFS<>();
+        Search<Integer> search = new BFS<>();
         search.traverse(v0);
     }
 }
