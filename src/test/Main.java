@@ -14,10 +14,11 @@ import static test.LongestWords.longestWordsHelper;
 import static test.TreeConst.TreeConstructor;
 import static test.MedianSortedArrays.findMedianSortedArrays;
 import static test.TreeConst.TreeConstructorHelper;
-
+import static test.BusRouts.busRoutsHelper;
 public class Main {
     public static void main(String[] args)  {
-        mainHelper();
+        //mainHelper();
+        busRoutsHelper();
         System.out.println("see yaaaa");
     }
 
@@ -65,6 +66,9 @@ public class Main {
                     break;
                 case "9":
                     BFS.BFSHelper();
+                    break;
+                case "10":
+                    BusRouts.busRoutsHelper();
                     break;
                 case "stop":
                     return;

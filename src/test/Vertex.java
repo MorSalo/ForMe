@@ -3,7 +3,7 @@ package test;
 import java.util.*;
 
 
-public class Vertex<T> {
+public class Vertex<T>{
     T val;
     boolean visited;
     List<Vertex<T>> adj = null;
@@ -17,6 +17,4 @@ public class Vertex<T> {
     public void setAdj(List<Vertex<T>> list){
         adj = list;
     }
-
-
 }
