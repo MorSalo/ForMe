@@ -15,10 +15,11 @@ import static test.TreeConst.TreeConstructor;
 import static test.MedianSortedArrays.findMedianSortedArrays;
 import static test.TreeConst.TreeConstructorHelper;
 import static test.BusRouts.busRoutsHelper;
+import static test.AddTwoNums.*;
 public class Main {
     public static void main(String[] args)  {
         //mainHelper();
-        busRoutsHelper();
+        AddTwoNums.addTwoNumsHelper();
         System.out.println("see yaaaa");
     }
 
